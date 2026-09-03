@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enterprise Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --light-green: #e6f9ea;
+            --header-nav-light-blue: #d3eafd;
+            --nav-blue: #4682fa;
+            --main-metallic: linear-gradient(135deg,#e6e8ea 0%,#adb3bc 40%,#75787c 100%);
+            --footer-gray: #f2f2f2;
+            --accent: #005eff;
+            --modern-shadow: 0 6px 24px 0 rgba(60,72,86,0.08), 0 1.5px 6px rgba(16,28,36,0.08);
+            --card-bg: rgba(255,255,255,0.92);
+            --radius: 18px;
+        }
+        body {
+            margin: 0;
+            font-family: 'Inter', 'Helvetica Neue', Arial, 'sans-serif';
+            background: #f8fafc;
+            color: #232629;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 32px;
+            padding-right: 32px;
+            /* 给内容一些左右留白 */
+        }
+   
+
+        .header {
+            background: var(--light-green);
+            padding: 28px 0 16px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* Shadows for trendiness */
+            box-shadow: var(--modern-shadow);
+        }
+
+        #logo {
+            margin: 0 32px;
+            letter-spacing: 0.02em;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #21b573;
+            text-shadow: 0 2px 8px rgba(80,180,120,.07);
+        }
+
+        #header-nav {
+            background: var(--header-nav-light-blue);
+            border-radius: var(--radius);
+            padding: 9px 28px;
+            margin-right: 24px;
+            box-shadow: 0 2px 10px rgba(66,150,255,0.04);
+        }
+        #header-nav ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 34px;
+            list-style: none;
+        }
+        #header-nav a {
+            text-decoration: none;
+            color: #234a87;
+            font-weight: 500;
+            font-size: 1.02rem;
+            transition: color .18s cubic-bezier(.4,0,.2,1);
+        }
+        #header-nav a:hover {
+            color: var(--accent);
+            letter-spacing: 0.02em;
+        }
+
+        .nav {
+            background: var(--nav-blue);
+            color: #fff;
+            padding: 43px 0 38px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: var(--modern-shadow);
+        }
+        #big-title {
+            font-size: 2.7rem;
+            letter-spacing: 0.01em;
+            line-height: 1.16;
+            font-weight: 800;
+            margin: 0 0 9px 0;
+        }
+        #subtitle {
+            font-size: 1.3rem;
+            font-weight: 500;
+            opacity: 0.92;
+            margin: 0 0 30px 0;
+        }
+        #talk-with-us {
+            background: linear-gradient(90deg, #1481ff 0%, #00e8d7 80%);
+            color: #fff;
+            border: none;
+            border-radius: 999px;
+            padding: 12px 38px;
+            font-weight: 600;
+            font-size: 1.08rem;
+            letter-spacing: 0.01em;
+            cursor: pointer;
+            box-shadow: 0 2px 12px #09e8d555;
+            transition: background .2s cubic-bezier(.4,0,.2,1), box-shadow .2s;
+        }
+        #talk-with-us:hover {
+            background: linear-gradient(90deg, #00e8d7 0%, #1481ff 80%);
+            box-shadow: 0 6px 24px #00e8d799;
+        }
+
+        .main {
+            background: var(--main-metallic);
+            min-height: 450px;
+            padding: 70px 0;
+            display: flex;
+            justify-content: center;
+            gap: 38px;
+        }
+        .card-item {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: 0 4px 24px 0 rgba(60,72,86,.11);
+            padding: 36px 32px 32px 32px;
+            max-width: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: box-shadow .16s cubic-bezier(.4,0,.2,1), transform .12s;
+        }
+        .card-item:hover {
+            box-shadow: 0 12px 36px 0 rgba(60,72,86,0.23);
+            transform: translateY(-4px) scale(1.035);
+        }
+        .card-item h3 {
+            margin: 0 0 18px 0;
+            font-size: 1.22rem;
+            font-weight: 700;
+            color: #393e46;
+        }
+        .card-item p {
+            margin: 0;
+            font-size: 1.02rem;
+            color: #5f646f;
+        }
+
+        .footer {
+            background: var(--footer-gray);
+            color: #888;
+            padding: 38px 0 26px 0;
+            text-align: center;
+            font-size: 1rem;
+            letter-spacing: 0.01em;
+            box-shadow: 0 -2px 14px rgba(120,140,160,.05);
+        }
+        .footer p {
+            margin: 0 0 6px 0;
+        }
+
+        @media (max-width: 900px) {
+            .main {
+                flex-direction: column;
+                align-items: center;
+                gap: 26px;
+                padding: 36px 0;
+            }
+            .card-item {
+                width: 90vw;
+                min-width: unset;
+                max-width: 99vw;
+                align-items: center;
+            }
+            .header, .footer, .nav {
+                padding-left: 2vw;
+                padding-right: 2vw;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1 id="logo">Company Logo</h1>
+        <nav id="header-nav">
+            <ul>
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#">Product</a></li>
+                <li class="nav-item"><a href="#">About Us</a></li>
+                <li class="nav-item"><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav class="nav">
+        <h2 id="big-title">Big Title</h2>
+        <h3 id="subtitle">Subtitle</h3>
+        <button id="talk-with-us">Talk With Us</button>
+    </nav>
+    <main class="main">
+        <section class="card-item">
+            <h3>Title</h3>
+            <p>Description goes here.</p>
+        </section>
+        <section class="card-item">
+            <h3>Title</h3>
+            <p>Description goes here.</p>
+        </section>
+        <section class="card-item">
+            <h3>Title</h3>
+            <p>Description goes here.</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Information</p>
+        <p>Company Address</p>
+    </footer>
+</div>
+</body>
+</html>
