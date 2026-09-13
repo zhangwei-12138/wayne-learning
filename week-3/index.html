@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="p-4 w-full h-20 rounded-full">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2 bg-green-300">title</h3> 
+            </div>
+            <div class="p-4 h-15 m-8 ">
+                <P class="text-gray-600 mb-4 bg-pink-400 ">second title</P>
+            </div>
+            <div class="w-full h-40 shadow">
+                <P class="text-sm text-gray-500 line-clamp-2 bg-blue-300 hover:bg-yellow-300">desc</P>
+            </div>
+            <div class="w-[300px] bg-pink-400 p-6 rounded-lg border border-gray-200 shadow"> card desc</div>
+        </div>
+        <div class="flex justify-between items-center mt-6 bg-blue-200">
+            <span class="text-sm text-orange-500 font-medium">something</span>
+            <div class="flex gap-2">
+                <button class="h-8 px-3 text-sm bg-yellow-300 border-gray-300 rounded-lg">1</button>
+                <button class="h-8 px-3 text-sm bg-pink-300 text-white rounded">2</button>
+            </div>
+        </div>
+
+        <!-- 导航栏 -->
+        <nav class="h-[64px] bg-white border-b border-gray-200">
+            <div class="flex h-full max-w-[1200px] w-full mx-auto px-4 items-center justify-between">
+                <!-- 左侧 logo -->
+                <p class="text-xl font-bold text-blue-800">logo</p>
+                <!-- 中间导航链接 -->
+                <div class="flex items-center gap-8 text-gray-600">
+                    <a href="#" class="hover:text-blue-800">首页</a>
+                    <a href="#" class="hover:text-blue-800">产品</a>
+                    <a href="#" class="hover:text-blue-800">关于</a>
+                    <a href="#" class="hover:text-blue-800">联系</a>
+                </div>
+                <!-- 最右侧按钮 -->
+                <button class="h-8 px-4 text-sm text-white bg-blue-600 rounded hover:bg-blue-700">
+                    立即咨询
+                </button>
+            </div>
+        </nav>
+        <div>
+            <button class="h-8 rounded-lg bg-blue-100 hover:bg-blue-600 focus:ring-[15px] focus:ring-red-300">button</button>
+        </div>
+    </body>
+</html>
